@@ -78,6 +78,10 @@ def download(data_type):
     else:
         return "File not found", 404
 
+# Health check endpoint
+@app.route('/health')
+def health_check():
+    return 'OK', 200
 
 if __name__ == '__main__':
     app.run(debug=True)
